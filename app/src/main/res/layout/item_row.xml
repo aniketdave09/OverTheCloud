@@ -6,7 +6,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
-        android:id="@+id/rowTitle"
+        android:id="@+id/tvHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
@@ -14,9 +14,9 @@
         android:text="Row Title"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/horizontalRecyclerView"
+        android:id="@+id/rvItems"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"/>
 
 </LinearLayout>

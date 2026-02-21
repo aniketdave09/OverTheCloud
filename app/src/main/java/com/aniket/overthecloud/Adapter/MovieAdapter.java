@@ -1,4 +1,4 @@
-package com.aniket.overthecloud;
+package com.aniket.overthecloud.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.aniket.overthecloud.R;
 import com.aniket.overthecloud.data.model.Movie;
 
 import java.util.List;
@@ -52,7 +53,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         public MovieViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            movieTitle = itemView.findViewById(R.id.movieTitle);
+            movieTitle = itemView.findViewById(R.id.tvTitle);
         }
     }
 }
