@@ -17,7 +17,7 @@
         >
 
         <activity
-            android:name=".UI.MainActivity"
+            android:name=".UI.Activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".UI.DetailActivity"
+            android:name=".UI.Activity.DetailActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.OverTheCloud" />

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">OverTheCloud</string>
+    <string name="app_logo_text">OVERTHE CLOUD</string>
+    <string name="meta_divider">  |  </string>
+    <string name="meta_format">%1$s  |  %2$s  |  ⭐ %3$s  |  %4$s</string>
+    <string name="credits_genres"><b>Genres:</b> %1$s</string>
+    <string name="credits_director"><b>Director:</b> %1$s</string>
+    <string name="credits_cast"><b>Cast:</b> %1$s</string>
+    <string name="credits_source"><b>Source:</b> %1$s</string>
 </resources>

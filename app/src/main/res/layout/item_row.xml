@@ -24,6 +24,8 @@
         android:clipChildren="false"
         android:clipToPadding="false"
         android:paddingStart="12dp"
-        android:paddingEnd="12dp" />
+        android:paddingEnd="12dp"
+        android:focusable="false"
+        />
 
 </LinearLayout>

@@ -1,5 +1,7 @@
 package com.aniket.overthecloud.data.model;
 
+import android.annotation.SuppressLint;
+
 import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
@@ -146,5 +148,17 @@ public class RowItem {
 
     public String getTileHeight() {
         return tileHeight != null ? tileHeight : "";
+    }
+
+    public String getBestImageUrl() {
+        if (background != null && !background.isEmpty()) return background;
+        if (poster != null && !poster.isEmpty()) return poster;
+        return portrait != null ? portrait : "";
+    }
+
+    @SuppressLint("StringFormatMatches")
+    public String getFormattedMeta(android.content.Context context) {
+        return context.getString(com.aniket.overthecloud.R.string.meta_format,
+                year, runtime, rating, type.toUpperCase());
     }
 }
