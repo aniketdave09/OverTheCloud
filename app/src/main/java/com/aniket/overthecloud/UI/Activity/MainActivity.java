@@ -1,5 +1,4 @@
 package com.aniket.overthecloud.UI.Activity;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.SpannableString;
@@ -15,7 +14,7 @@ import com.aniket.overthecloud.UI.Adapter.RowAdapter;
 import com.aniket.overthecloud.data.repository.MovieRepository;
 import com.aniket.overthecloud.databinding.ActivityMainBinding;
 import com.aniket.overthecloud.viewmodel.MainActvityViewModel;
-import com.aniket.overthecloud.viewmodel.DetailActivityViewModel;
+import com.aniket.overthecloud.viewmodel.ViewModelProviderFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         initUI();
         setupViewModel();
         observeData();
@@ -40,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         String text = getString(R.string.app_logo_text);
         SpannableString spannable = new SpannableString(text);
         spannable.setSpan(new StyleSpan(android.graphics.Typeface.BOLD), 8, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannable.setSpan(new ForegroundColorSpan(Color.parseColor("#00AEEF")), 8, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.parseColor(String.valueOf(R.color.heading))), 8, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         binding.tvAppLogo.setText(spannable);
 
         // RecyclerView
@@ -51,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupViewModel() {
-        MovieRepository repository = new MovieRepository(this);
-        DetailActivityViewModel factory = new DetailActivityViewModel(repository);
+        MovieRepository repository = new MovieRepository(getApplicationContext());
+        ViewModelProviderFactory factory = new ViewModelProviderFactory(repository);
         viewModel = new ViewModelProvider(this, factory).get(MainActvityViewModel.class);
     }
 

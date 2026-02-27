@@ -36,7 +36,7 @@ public class RowItemAdapter extends RecyclerView.Adapter<RowItemAdapter.ViewHold
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // Use ViewBinding for a clean, stable reference to all views
+        //  ViewBinding for a clean, stable reference to all views
         ItemMovieBinding binding = ItemMovieBinding.inflate(LayoutInflater.from(context), parent, false);
         return new ViewHolder(binding);
     }
@@ -63,7 +63,7 @@ public class RowItemAdapter extends RecyclerView.Adapter<RowItemAdapter.ViewHold
             // 1. Set Title Text
             binding.tvTitle.setText(item.getTitle() != null ? item.getTitle() : "");
 
-            // 2. Calculate Dimensions (Exactly like your original logic)
+            // 2. Calculate Dimensions (Exactly like original logic)
             int width;
             float ratio;
             String imageUrl;

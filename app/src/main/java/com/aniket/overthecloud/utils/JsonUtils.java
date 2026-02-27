@@ -12,7 +12,6 @@ public class JsonUtils {
 
         try {
             InputStream is = context.getAssets().open("thunder_cats.json");
-
             int size = is.available();
 
             byte[] buffer = new byte[size];

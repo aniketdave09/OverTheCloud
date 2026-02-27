@@ -5,10 +5,10 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import com.aniket.overthecloud.data.repository.MovieRepository;
 
-public class DetailActivityViewModel implements ViewModelProvider.Factory {
+public class ViewModelProviderFactory implements ViewModelProvider.Factory {
     private final MovieRepository repository;
 
-    public DetailActivityViewModel(MovieRepository repository) {
+    public ViewModelProviderFactory(MovieRepository repository) {
         this.repository = repository;
     }
 
